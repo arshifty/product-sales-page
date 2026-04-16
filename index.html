@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product Sales Page</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+body{
+    margin:0;
+    font-family:'Poppins', sans-serif;
+    background:#f5f7fb;
+    color:#333;
+}
+
+/* HEADER */
+header{
+    background:linear-gradient(135deg,#6a11cb,#2575fc);
+    color:white;
+    text-align:center;
+    padding:25px 15px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.2);
+}
+
+header h1{
+    margin:0;
+    font-size:28px;
+}
+
+/* COUNTDOWN */
+.countdown{
+    background:#111;
+    color:#fff;
+    text-align:center;
+    padding:15px;
+    font-size:18px;
+}
+
+/* HERO */
+.hero{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:center;
+    padding:30px 15px;
+    gap:30px;
+}
+
+/* PRODUCT IMAGE */
+.product-img{
+    width:100%;
+    max-width:320px;
+    border-radius:15px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.25);
+    transition:0.4s;
+}
+
+.product-img:hover{
+    transform:scale(1.05);
+    box-shadow:0 15px 40px rgba(0,0,0,0.35);
+}
+
+/* DETAILS */
+.details{
+    max-width:450px;
+}
+
+.details h2{
+    font-size:24px;
+}
+
+.price{
+    font-size:26px;
+    color:#27ae60;
+    font-weight:bold;
+}
+
+.old-price{
+    text-decoration:line-through;
+    color:#999;
+    margin-left:10px;
+}
+
+/* BUTTON */
+.btn{
+    display:inline-block;
+    padding:12px 25px;
+    background:#ff4757;
+    color:white;
+    border:none;
+    border-radius:8px;
+    font-size:16px;
+    cursor:pointer;
+    margin-top:15px;
+    text-decoration:none;
+    transition:0.3s;
+    box-shadow:0 5px 15px rgba(255,71,87,0.4);
+}
+
+.btn:hover{
+    background:#e84118;
+    transform:translateY(-3px);
+    box-shadow:0 10px 25px rgba(255,71,87,0.6);
+}
+
+/* FEATURES */
+.features{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+    padding:30px 15px;
+    text-align:center;
+}
+
+.feature-box{
+    background:white;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.feature-box:hover{
+    transform:translateY(-8px);
+    box-shadow:0 15px 30px rgba(0,0,0,0.2);
+}
+
+/* REVIEWS */
+.reviews{
+    padding:30px 15px;
+    text-align:center;
+}
+
+.review{
+    background:white;
+    padding:15px;
+    margin:10px auto;
+    max-width:500px;
+    border-radius:10px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.review:hover{
+    transform:scale(1.02);
+    box-shadow:0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* FOOTER */
+footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+.social i{
+    margin:0 10px;
+    font-size:20px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.social i:hover{
+    color:#ff4757;
+    transform:scale(1.2);
+}
+
+/* MOBILE OPTIMIZATION */
+@media(max-width:768px){
+
+    header h1{
+        font-size:22px;
+    }
+
+    .details h2{
+        font-size:20px;
+    }
+
+    .price{
+        font-size:22px;
+    }
+
+    .btn{
+        width:100%;
+        text-align:center;
+    }
+
+    .hero{
+        text-align:center;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1> Limited Time Product Offer </h1>
+</header>
+
+<div class="countdown">
+    Offer ends in: <span id="timer"></span>
+</div>
+
+<section class="hero">
+    <img class="product-img" src="image1.png" alt="Product">
+
+    <div class="details">
+        <h2>Amazing Product Name</h2>
+        <p>High quality product for your daily needs. Boost your lifestyle with premium features.</p>
+
+        <div class="price">
+            $29.99 <span class="old-price">$59.99</span>
+        </div>
+
+        <a href="#" class="btn">🛒 Buy Now</a>
+
+        <p style="margin-top:10px;">
+            ⭐⭐⭐⭐⭐ (4.8/5 from 1200+ customers)
+        </p>
+    </div>
+</section>
+
+<section class="features">
+    <div class="feature-box">
+        <h3>⚡ Fast Delivery</h3>
+        <p>Get your product within 2-5 days.</p>
+    </div>
+    <div class="feature-box">
+        <h3>💯 Premium Quality</h3>
+        <p>Best materials & long lasting design.</p>
+    </div>
+    <div class="feature-box">
+        <h3>🔒 Secure Payment</h3>
+        <p>100% safe & trusted checkout.</p>
+    </div>
+</section>
+
+<section class="reviews">
+    <h2>Customer Reviews</h2>
+
+    <div class="review">"Amazing product! Totally worth the money." ⭐⭐⭐⭐⭐</div>
+    <div class="review">"Fast delivery and great quality." ⭐⭐⭐⭐⭐</div>
+    <div class="review">"Highly recommended for everyone." ⭐⭐⭐⭐⭐</div>
+</section>
+
+<footer>
+    <p>Follow us</p>
+    <div class="social">
+        <i class="fab fa-facebook"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-whatsapp"></i>
+        <i class="fab fa-twitter"></i>
+    </div>
+    <p>© 2026 Your Brand. All rights reserved.</p>
+</footer>
+
+<script>
+let countDate = new Date().getTime() + 24*60*60*1000;
+
+let x = setInterval(function(){
+    let now = new Date().getTime();
+    let distance = countDate - now;
+
+    let hours = Math.floor((distance % (1000*60*60*24))/(1000*60*60));
+    let minutes = Math.floor((distance % (1000*60*60))/(1000*60));
+    let seconds = Math.floor((distance % (1000*60))/1000);
+
+    document.getElementById("timer").innerHTML =
+    hours + "h " + minutes + "m " + seconds + "s ";
+
+    if(distance < 0){
+        clearInterval(x);
+        document.getElementById("timer").innerHTML = "EXPIRED";
+    }
+},1000);
+</script>
+
+</body>
+</html>
